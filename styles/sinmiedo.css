@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Asegura que todo se apile verticalmente */
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+/* ======== SIDEBAR ======== */
+.sidebar {
+    width: 280px;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.img-logo-nav {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #454545;
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    background: linear-gradient(90deg, #4c3ab4, #fd621d, #fce645);
+    background-size: 200% 200%;
+    transition: 0.5s;
+    background-position: right center;
+    color: white;
+}
+
+/* ======== CONTENT ======== */
+.content {
+    margin-left: 300px;
+    padding: 40px;
+    width: calc(100% - 300px);
+}
+
+section {
+    margin-bottom: 50px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 15px;
+    color: #626262;
+}
+
+h2 {
+    margin: 20px;
+}
+
+/* ======== ENLACES DE DESCARGA PDF ======== */
+.descargarpdf {
+    color: #333;
+    margin-left: 10px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ======== FOOTER PRINCIPAL ======== */
+.footer {
+    background-color: #494963;
+    text-align: center;
+    padding: 30px 20px 10px 20px;
+    margin-left: 300px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-logo img {
+    width: 180px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+.footer-social p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======== SECCIÓN FINAL DEL FOOTER ======== */
+.seccionfooter {
+    background-color: #3e3d5c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 300px;
+}
+
+.pfooter {
+    color: white;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* ======== ICONOS DE REDES SOCIALES ======== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #1c1b33;
+    transform: scale(1.2);
+}
+
+/* ==========  Timbó ========== */
+
+#productostimbo {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+#productostimbo h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #4c3ab4;
+    animation: slideIn 0.8s ease-out;
+}
+
+#productostimbo h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #333;
+}
+
+#productostimbo video {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+#productostimbo video:hover {
+    transform: scale(1.02);
+}
+
+.descargarpdf {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #4c3ab4, #fd621d, #fce645);
+    background-size: 200% 200%;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    animation: pulse 2s infinite, fadeIn 1s ease-in;
+    transition: background-position 0.4s ease, transform 0.2s ease;
+}
+
+.descargarpdf:hover {
+    background-position: right center;
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+
+/* ==========  Timbó ========== */
+
+/* ==========  Agenda ========== */
+
+.evento-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f0f2f5, #ffffff);
+  }
+
+  .evento-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .evento-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  .evento-img {
+    max-width: 500px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .evento-img:hover {
+    transform: scale(1.02);
+  }
+
+
+/* ==========  Fin Agenda ========== */
+
+
+
+
+/* ========== RESPONSIVE ADAPTATION ========== */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sidebar ul li {
+        margin: 0;
+    }
+
+    .sidebar ul li a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .img-logo-nav {
+        width: 150px;
+        margin: 0 auto 10px;
+        display: block;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .footer,
+    .seccionfooter {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .footer-logo img {
+        width: 120px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.img-casagob {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Ajuste especial para pantallas pequeñas */
+@media (max-width: 768px) {
+    .img-casagob {
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+}
+
+
+
+.img-logo {
+    width: 200px;
+    margin-left: 50px;
+    padding-top: 5px;
+}
+
+.img-logo-nav {
+    width: 200px;
+}
+
+.contenedor-header {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin: 20px;
+    margin-left: 70px;
+    margin-right: 70px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*========================= BOTONES ===========================*/
+
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 250px;
+    max-width: 300px;
+    min-height: 80px;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #71717F;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    line-height: 1.4;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px #4A4A49;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 60%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-out;
+}
+
+.button:active::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/*========================= INFO ===========================*/
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+    color: #626262;
+}
+
+.info-section {
+    background: linear-gradient(135deg, #f3f4f6, #ffffff);
+    padding: 60px 20px;
+}
+
+.info-container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info-container h2 {
+    font-size: 32px;
+    color: #0071c5;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.info-container p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*========================= FOOTER ===========================*/
+
+/* ======== FOOTER PRINCIPAL ======== */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f8f9fa;
+    border-top: 2px solid #e0e0e0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header-principal {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.contenedor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.img-logo {
+    max-width: 220px;
+    height: auto;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor-header {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .img-logo {
+        max-width: 180px;
+    }
+}
+
+
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+    .contenedor-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-botones {
+        padding: 1rem;
+    }
+
+    .button {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .info-container {
+        padding: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        font-size: 16px;
+        padding: 10px 16px;
+        min-height: 60px;
+    }
+
+    .info-container h2 {
+        font-size: 24px;
+    }
+
+    .info-container p {
+        font-size: 16px;
+    }
+}

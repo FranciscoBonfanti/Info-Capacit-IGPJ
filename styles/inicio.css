@@ -53,8 +53,8 @@
 .contenedor-botones {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 5px;
+    justify-content: center;
+    gap: 20px; /* más espacio entre botones */
     margin: 30px auto;
     max-width: 1000px;
     padding: 0 20px;
@@ -175,9 +175,9 @@ h1 {
     color: white;
     text-decoration: none;
     border-radius: 12px;
-    padding: 20px;
-    width: 140px;
-    height: 120px;
+    padding: 24px;
+    width: 160px; /* Aumentado */
+    height: 140px; /* Aumentado */
     font-weight: bold;
     font-family: sans-serif;
     transition: transform 0.2s ease;
@@ -188,8 +188,8 @@ h1 {
 }
 
 .icono-boton {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 10px;
 }
 
@@ -254,12 +254,20 @@ h1 {
     }
 
     .contenedor-botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* más espacio vertical entre botones */
         padding: 1rem;
     }
 
     .button {
-        flex: 1 1 100%;
+        width: 100%;
         max-width: 100%;
+    }
+
+    .card-button {
+        width: 200px;  /* botón de agenda más grande */
+        height: 170px;
     }
 
     .info-container {
@@ -270,6 +278,7 @@ h1 {
         flex-direction: column;
     }
 }
+
 
 @media (max-width: 480px) {
     .button {

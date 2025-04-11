@@ -35,3 +35,5 @@ eventos.forEach(evento => {
         contAnteriores.appendChild(div);
     }
 });
+
+// Selecciona todos los botones de acordeón

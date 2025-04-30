@@ -2,12 +2,14 @@ const eventos = [
     {
         titulo: "Herramientas Colaborativas para el Trabajo Virtual.",
         fechaTexto: "Miércoles 16 de abril - de 12:15 a 13:15 hs",
-        fecha: "2025-04-16T12:15:00"
+        fecha: "2025-04-16T12:15:00",
+        enlace: "RmhGXJbyhO4"       
     },
     {
         titulo: "Organización del tiempo y gestión colaborativa del trabajo.",
         fechaTexto: "Miércoles 23 de abril - de 12:15 a 13:15 hs",
-        fecha: "2025-04-23T12:15:00"
+        fecha: "2025-04-23T12:15:00",
+        enlace: "AbJIjK9SZMI"     
     },
     {
         titulo: "Capacitación en gestión de Expedientes Electrónicos y Documentos Oficiales.",
@@ -16,6 +18,7 @@ const eventos = [
         enlace: "5oa1ooqcqPw"
     }
 ];
+
 
 const ahora = new Date();
 const contProximas = document.getElementById('proximas');
@@ -29,7 +32,6 @@ eventos.forEach(evento => {
     let tituloElemento;
 
     if (evento.enlace && fechaEvento < ahora) {
-        // Título con flechita desplegable
         tituloElemento = document.createElement('span');
         tituloElemento.classList.add('titulo');
         tituloElemento.style.cursor = 'pointer';
@@ -40,7 +42,7 @@ eventos.forEach(evento => {
         texto.textContent = evento.titulo + " ";
         
         const flecha = document.createElement('span');
-        flecha.innerHTML = "&#9660;"; // Flecha hacia abajo
+        flecha.innerHTML = "&#9660;"; 
 
         tituloElemento.appendChild(texto);
         tituloElemento.appendChild(flecha);
@@ -59,10 +61,10 @@ eventos.forEach(evento => {
                 iframe.allowFullscreen = true;
 
                 div.appendChild(iframe);
-                flecha.innerHTML = "&#9650;"; // Flecha hacia arriba
+                flecha.innerHTML = "&#9650;"; 
             } else {
                 yaExiste.remove();
-                flecha.innerHTML = "&#9660;"; // Flecha hacia abajo
+                flecha.innerHTML = "&#9660;"; 
             }
         });
     } else {

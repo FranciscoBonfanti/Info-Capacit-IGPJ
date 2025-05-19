@@ -3,7 +3,7 @@ const eventos = [
         titulo: "Capacitación en Atención Virtual.",
         fechaTexto: "Miércoles 14 de mayo - de 12:15 a 13:15 hs",
         fecha: "2025-05-14T12:15:00",
-        enlace: ""       
+        enlace: "https://www.youtube.com/watch?v=oMxGPOxU7SA"       
     },
     {
         titulo: "Herramientas Colaborativas para el Trabajo Virtual.",
